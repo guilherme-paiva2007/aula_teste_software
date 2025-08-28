@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+    <div id="form">
+
+        <form id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="usuario" placeholder="Usuário" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+            <p class="msg" id="mensagem"></p>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("loginForm");
+        const mensagem = document.getElementById("mensagem");
+
+      
+        const usuarioCorreto = "admin";
+        const senhaCorreta = "1234";
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+
+            if (usuario === usuarioCorreto && senha === senhaCorreta) {
+                mensagem.style.color = "green";
+                mensagem.textContent = " Login bem-sucedido!";
+            } else {
+                mensagem.style.color = "red";
+                mensagem.textContent = " Usuário ou senha incorretos.";
+            }
+        });
+    </script>
+</body>
+</html>
