@@ -48,7 +48,7 @@ button:hover {
   color: red;
 }
 #form{
-   opacity: 0.9;
+   /* opacity: 0.9; */
   background-color: rgba(255, 255, 255, 0.5); /* branco translúcido */
   backdrop-filter: blur(10px); /* efeito blur */
   padding: 30px;
@@ -61,4 +61,8 @@ button:hover {
 
 form{
     align-items: center;
+}
+
+button{
+    background-image: linear-gradient(to right, rgb(4, 161, 159), rgb(8, 88, 184));
 }
